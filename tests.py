@@ -4,10 +4,9 @@ from functions.write_files import write_file
 from functions.run_python import run_python_file
 
 def run_tests():
-    print(run_python_file("calculator", "main.py"))
-    print(run_python_file("calculator", "main.py", ["3 + 5"]))
-    print(run_python_file("calculator", "tests.py"))
-    print(run_python_file("calculator", "../main.py"))
-    print(run_python_file("calculator", "nonexistent.py"))
+    print(get_file_content({'file_path': 'main.py'}))
+    print(write_file({'file_path': 'main.txt', 'content': 'hello'}))
+    print(run_python_file({'file_path': 'main.py'}))
+    print(get_files_info({'directory': 'pkg'}))
 if __name__ == "__main__":
     run_tests()
